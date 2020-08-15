@@ -23,13 +23,10 @@ firebase.auth().onAuthStateChanged(function(user) {
   });
   function sendMessage() {
     // get message
-    
     var name=document.getElementById("name").value;
     var email=document.getElementById("email").value;
-    var phone_number=document.getElementById("phone_number").value.phone_number.lenght=10;
+    var phone_number=document.getElementById("phone_number").value;
     var message = document.getElementById("message").value;
-
-    
 
     // save in database
     firebase.database().ref("messages").push().set({
@@ -37,7 +34,6 @@ firebase.auth().onAuthStateChanged(function(user) {
         "email":email,
         "phone number":phone_number,
         "message": message
-        
     });
 
     // prevent form from submitting
@@ -78,5 +74,18 @@ var x = setInterval(function() {
     document.getElementById("eventt").innerHTML = "Event Started";
   }
 }, 1000);
+var slideIndex = 0;
+showSlides();
 
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
   

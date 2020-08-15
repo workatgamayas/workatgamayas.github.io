@@ -6,11 +6,11 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script> 
-<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script> 
-<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-databse.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
+
 <link rel="stylesheet" href="style.css">
 
 <style>
@@ -34,16 +34,16 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div  id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">GMA Masters</a>
+    <a href="#home" class="w3-bar-item w3-button w3-wide" id="hov">GMA Meida Communications </a>
     <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button"> TEAM</a>
-      <a href="#subs" class="w3-bar-item w3-button"> SUBSCRIPTION</a>
-      <a href="#work" class="w3-bar-item w3-button"> GALLERY</a>
-      <a href="login.html" class="w3-bar-item w3-button">LOGIN/REGISTER</a>
-      <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
-      <a id="logout" class="w3-bar-item w3-button" onclick="logout()">LOGOUT</a>
+    <div class="w3-right w3-hide-small" >
+      <a href="#about" class="w3-bar-item w3-button" id="hov"  > ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button" id="hov"> TEAM</a>
+      <a href="#subs" class="w3-bar-item w3-button" id="hov">DONATIONS</a>
+      <a href="#work" class="w3-bar-item w3-button" id="hov"> GALLERY</a>
+      <a href="login.html" class="w3-bar-item w3-button" id="hov">LOGIN/REGISTER</a>
+      <a href="#contact" class="w3-bar-item w3-button" id="hov">CONTACT</a>
+      <a id="logout" class="w3-bar-item w3-button" onclick="logout()" >LOGOUT</a>
       <!--<button id="logout" onclick="logout()">LOGOUT</button>-->
       <!--<a href="#contact" class="w3-bar-item w3-button" onclick="mainApp.logout();">LOGOUT</a>-->
     </div>
@@ -68,10 +68,60 @@ body, html {
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+     
+      <img src="srbg2.jpg" style="width:100%">
+    
+    </div>
+  
+    <div class="mySlides fade">
+   
+      <img src="kbg.jpg" style="width:100%">
+     
+    </div>
+  
+    <div class="mySlides fade">
+ 
+      <img src="vbg.jpg" style="width:100%">
+    
+    </div>
+    <div class="mySlides fade">
+    
+      <img src="gtbg.jpg" style="width:100%">
+    
+    </div>
+  
+    <div class="w3-display-left w3-text-white" style="padding:48px">
+      <div class="bbb">
+      <span class="w3-jumbo w3-hide-small" style="color:rgb(0, 0, 0)" > Ghantasala <br> <div class="x">Music Academy <h3><b>Media Communications</b></h3></div> </span><br> 
+        
+      <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span></div><br>
+      <br>
+      <p><a href="#about" div class="w3-button w3-white w3-padding-large" style="margin-top: -250px;">Register for Virtual Event</a></p>
+    </div> 
+    <div class="w3-display-bottomleft w3-text-white w3-large" style="padding:24px 48px">
+      <i class="fa fa-facebook-official w3-hover-opacity" style="color: black;"></i>
+      <i class="fa fa-instagram w3-hover-opacity"style="color: black;"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"style="color: black;"></i>
+     
+      <i class="fa fa-twitter w3-hover-opacity"style="color: black;"></i>
+      
+    </div>
+  </div>
+
+  
+  <!-- The dots/circles -->
+
+</header>
+<!-- Header with full-height image 
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-white" style="padding:48px">
     <div class="bbb">
     <span class="w3-jumbo w3-hide-small" style="color:rgb(255, 255, 255)"> Ghantasala <br> <div class="x">Music Academy</div></span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span></div><br>
+    
     <br>
     <p><a href="#about" div class="w3-button w3-white w3-padding-large w3-large w3- w3-hover-opacity-off">Register for Virtual Event</a></p>
   </div> 
@@ -83,14 +133,14 @@ body, html {
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
-</header>
+</header>-->
 
 <!-- About Section -->
-<div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center"><u>ABOUT THE ACADEMY</u></h3>
+<div class="w3-container1" style="padding:128px 16px" >
+<div class=abt><h3 class="w3-center"><u>ABOUT THE ACADEMY</u></h3>
   <p class="w3-center w3-large">Ghantasala Music Academy</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class=abt>
+    
  
     
       <p>Ghantasala Music Academy started in the year 1997 by GT Srinivas Rao who is renowned artist. Revered SPB has led the Academy as President along with other well-liked music artists. 
@@ -106,64 +156,54 @@ body, html {
 <div class="w3-container" style="padding:128px 16px" id="team">
   <h3 class="w3-center">THE TEAM</h3>
   <p class="w3-center w3-large">Our Team our sterngth</p>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+  <div class="w3-row-padding " style="margin-left:248px">
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+      <div class="w3-card" style="background-color: rgb(255, 255, 255);">
+        <img src="1.jpg" alt="John" style="width:100%">
         <div class="w3-container">
-          <h3>Admin 1</h3>
-          <p class="w3-opacity">CEO & Founder</p>
+          <h3>G T Srinivas Rao</h3>
+          <p class="w3-opacity">Director1</p>
           <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+      <div class="w3-card" style="background-color: rgb(255, 255, 255);">
+        <img src="2.jpeg" alt="Jane" style="width:100%">
         <div class="w3-container">
-          <h3>Admin 2</h3>
-          <p class="w3-opacity">Art Director</p>
+          <h3>USL Madhuri</h3>
+          <p class="w3-opacity">Director2</p>
           <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+      <div class="w3-card" style="background-color: rgb(255, 255, 255);">
+        <img src="3.jpg" alt="Mike" style="width:100%">
         <div class="w3-container">
-          <h3>Admin 3</h3>
-          <p class="w3-opacity">Web Designer</p>
+          <h3>Chandra Lekha</h3>
+          <p class="w3-opacity">Director3</p>
           <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
-        <div class="w3-container">
-          <h3>Admin 4</h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </div>
 
 <!-- Subscription -->
 
-<div class="w3-container" style="padding:128px 16px" id="subs">
-  <h3 class="w3-center">SUBSCRIPTION</h3>
-  <p class="w3-center w3-large">Our Subscription Packages</p>
+<div class="w3-container5" style="padding:128px 16px" id="subs">
+  <h3 class="w3-center" style="color: white;">DONATIONS</h3>
+  <p class="w3-center w3-large"style="color: white;">Donate us</p>
 
   <div class="w3-row-padding w3-section w3-stretch w3-grayscale" style="margin-left:248px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card" >
-        <div class="w3-container" style="background-color: rgba(169, 231, 255, 0.897);">
+        <div class="w3-container bo" style="background-color: rgb(226, 226, 226);">
           <h3>Poshakulu</h3>
           <p class="w3-opacity">Pay Rupees 100/-</p>
           <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
@@ -173,7 +213,7 @@ body, html {
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <div class="w3-container" style="background-color: rgba(132, 220, 255, 0.897);">
+        <div class="w3-container bo" style="background-color: rgb(226, 226, 226);">
           <h3>Raja Poshakulu</h3>
           <p class="w3-opacity">Pay Rupees 500/-</p>
           <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
@@ -183,7 +223,7 @@ body, html {
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <div class="w3-container" style="background-color: rgba(110, 214, 255, 0.897);">
+        <div class="w3-container bo" style="background-color: rgb(226, 226, 226);">
           <h3>Maharaja Poshakulu</h3>
           <p class="w3-opacity">Pay Rupees 1000/-</p>
           <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
@@ -198,36 +238,38 @@ body, html {
 
 
 <div>
-
-<div class="eventstart" style="background-image: url('lb3.jpg');">
+<div calss="eve" id=eve>
+<div class="eventstart" >
    <div class="eventte">Next Event In</div>
  <div class="eventt" id="eventt"> </div>
  <div class="eventtex" id="eventtex"><p>Days:Hours:Minutes:Seconds</p></div>
 </div>
 <!-- Promo Section "Statistics" -->
 <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64" id="x">
-  <div class="w3-quarter" style="color:black">
+  <div class="w3-quarter" style="color:rgb(255, 255, 255)">
     <span class="w3-xxlarge" >100+</span>
     <br>Events
   </div>
-  <div class="w3-quarter" style="color:black">
+  <div class="w3-quarter" style="color:rgb(255, 255, 255)">
     <span class="w3-xxlarge">1000+</span>
     <br>Students
   </div>
-  <div class="w3-quarter" style="color:black">
+  <div class="w3-quarter" style="color:rgb(255, 255, 255)">
     <span class="w3-xxlarge" >89+</span>
     <br>Happy Clients
   </div>
-  <div class="w3-quarter" style="color:black">
+  <div class="w3-quarter" style="color:rgb(255, 255, 255)">
     <span class="w3-xxlarge" >150+</span>
     <br>Meetings
   </div>
 </div>
+</div>
 
 
 <!-- Work Section -->
+<div class="biggg">
 <div class="w3-container" style="padding:128px 16px" id="work">
-  <h3 class="w3-center">OUR PAST EVENTS</h3>
+  <h3 class="w3-center"><b><u>OUR PAST EVENTS</u></b></h3>
   <p class="w3-center w3-large">What we've done for people</p>
 
   <div class="w3-row-padding" style="margin-top:64px">
@@ -287,7 +329,7 @@ body, html {
       <img src="Photo17.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
     </div>
   </div>
-  
+</div>
 </div>
 
 <!-- Modal for full size images on click-->
@@ -300,9 +342,12 @@ body, html {
 </div>
 
 <!--Video-->
+<div class="vid">
+<h2 class="w3-center" style="color: rgb(236, 160, 67);" ><b><u>Videos</u></b></h2>
 <section>
   <div align="center">
-  <video width="750" height="0" id="slider" autoplay muted loop controls>
+   
+  <video width="750" height="" id="slider" autoplay muted loop controls>
   <source src="video1.mp4" type="video/mp4">
   </video>
   <ul class="navigation">
@@ -319,31 +364,43 @@ body, html {
   </script>
 
 </video>
+</div>
 
 
 
 <!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">CONTACT</h3>
-  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <h3 class="w3-center" style="color: white;">CONTACT</h3>
+  <p class="w3-center w3-large" style="color: white;">Lets get in touch. Send us a message</p>
   <div style="margin-top:48px" >
-    <div class="vb">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Hyderabad,Telangana</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone:040-12345678</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <div class="vb" style="color: white;">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right" ></i>Hyderabad,Telangana</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right" ></i> Phone:040-12345678</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right" > </i> Email: mail@mail.com</p>
     <br>
-    <form target="_blank" onsubmit="sendMessage()">
+   <!---- <form target="_blank" onsubmit="sendMessage()">
       <p><input id="name" type="text" placeholder="Name" required name="Name" autocomplete="off"></p>
       <p><input id="email" type="email" placeholder="Email" required name="Email" autocomplete="off"></p>
-      <p><input id="phone_number" type="number" placeholder="Phone Number"  required name="Phone Number" autocomplete="off"></p>
+      <p><input id="phone_number" type="number" placeholder="Phone Number" min="1000000000" max="9999999999" required name="Phone Number" autocomplete="off"></p>
       <p><input id="message" type="text" placeholder="Message" required name="Message" autocomplete="off"></p>
-      <p></div>
-        <button class="w3-button w3-black" type="submit">
+      <p>
+        <button class="w3-button w3-black" style="margin-top: 20px" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>-->
+    <form target="_blank" onsubmit="sendMessage()">
+      <p><input id="name" type="text" placeholder="Name" required name="Name" autocomplete="off" size="10"></p>
+      <p><input id="email" type="email" placeholder="Email" required name="Email" autocomplete="off" size="10"></p>
+      <p><input id="phone_number" type="number" placeholder="Phone Number"  required name="Phone Number" autocomplete="off" size="10"></p>
+      <p><input id="message" type="text" placeholder="Message" required name="Message" autocomplete="off" size="10"></p>
+      <p>
+        <button class="w3-button w3-black" style="margin-top: 20px" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
     </form>
-  
+  </div>
   </div>
 </div>
 
@@ -352,14 +409,14 @@ body, html {
 <footer class="w3-center w3-black w3-padding-64" id="f">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"  style="color:black"></i>
-    <i class="fa fa-instagram w3-hover-opacity"  style="color:black"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"  style="color:black"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"  style="color:black"></i>
-    <i class="fa fa-twitter w3-hover-opacity"  style="color:black"></i>
-    <i class="fa fa-linkedin w3-hover-opacity" style="color:black"></i>
+    <i class="fa fa-facebook-official w3-hover-opacity"  style="color:white"></i>
+    <i class="fa fa-instagram w3-hover-opacity"  style="color:white"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"  style="color:white"></i>
+
+    <i class="fa fa-twitter w3-hover-opacity"  style="color:white"></i>
+   
   </div>
-  <p id="ft" style="color:black">Powered by <a href="http://gamayas.com/" title="W3.CSS" target="_blank" class="w3-hover-text-green">gamayas.com</a></p>
+  <p id="ft" style="color:white" >Powered by <a href="http://gamayas.com/" title="Gamayas.com" target="_blank" class="w3-hover-text-green">gamayas.com</a></p>
 </footer>
  
 <script>
@@ -389,7 +446,7 @@ function w3_close() {
 }
 </script>
 
-<script src="fireBase.js"></script>
+<script src="firebase.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
