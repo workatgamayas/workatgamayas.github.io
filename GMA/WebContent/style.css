@@ -50,7 +50,7 @@
   padding:8px;
   display:block;
   border-bottom:1px solid #ccc;
-  width:100%;
+  width:55%;
   border:1px solid #ccc!important;
 }
 #myNavbar{
@@ -78,21 +78,21 @@
   padding:8px;
   display:block;
   border-bottom:1px solid #ccc;
-  width:100%;
+  width:55%;
   border:1px solid #ccc!important;
 }
 #phone_number{
   padding:8px;
   display:block;
   border-bottom:1px solid #ccc;
-  width:100%;
+  width:55%;
   border:1px solid #ccc!important;
 }
 #message{
   padding:8px;
   display:block;
   border-bottom:1px solid #ccc;
-  width:100%;
+  width:55%;
   border:1px solid #ccc!important;
 }
 .bgimg-1 {
@@ -145,12 +145,12 @@ background-color: red;
  background-position-y: -0px;
   
     background-color: none;
-    background-image: url("D5VhEe.jpg");
+    background-image: url("a5.jpg");
    
   
 }
 .eventstart{
-  background-image: url("D5VhEe.jpg");
+  background-image: url("lb5.jpg");
   background-position-y: -470px;
 
   height: 250px;
@@ -361,6 +361,7 @@ position:none;
     display: none;
   }
   
+  
   .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 2.0s;
@@ -377,3 +378,5 @@ position:none;
     from {opacity: .4}
     to {opacity: 1}
   }
+  
+ 
