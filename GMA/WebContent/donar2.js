@@ -8,7 +8,7 @@ function paymentProcess() {
         "amount": 200*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 means 50000 paise or ₹500.
         "currency": "INR",
         "name": "GMA Media",
-        "description": "Donar Pass",
+        "description": "Poshakalu",
         "image": "gmalogo.png",// Replace this with the order_id created using Orders API (https://razorpay.com/docs/api/orders).
         "handler": function (response){
             savetoDB(response);
