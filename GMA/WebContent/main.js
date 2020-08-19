@@ -25,7 +25,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     // get message
     var name=document.getElementById("name").value;
     var email=document.getElementById("email").value;
-    var age=document.getElementById("age").value;
     var phone_number=document.getElementById("phone_number").value;
     var message = document.getElementById("message").value;
 
@@ -33,7 +32,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     firebase.database().ref("messages").push().set({
         "name": name,
         "email":email,
-        "age":age,
         "phone number":phone_number,
         "message": message
     });
