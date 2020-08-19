@@ -88,6 +88,13 @@
   width:55%;
   border:1px solid #ccc!important;
 }
+#age{
+  padding:8px;
+  display:block;
+  border-bottom:1px solid #ccc;
+  width:55%;
+  border:1px solid #ccc!important;
+}
 #message{
   padding:8px;
   display:block;
