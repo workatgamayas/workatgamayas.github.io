@@ -47,7 +47,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 
 
-var countDownDate = new Date("Nov 11, 2020 15:00:00").getTime();
+var countDownDate = new Date("Oct 11, 2020 15:00:00").getTime();
 
 
 var x = setInterval(function() {
@@ -89,3 +89,40 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
   
+
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "View more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "View less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+function myFunctionsss() {
+  var x = document.getElementById("gmasub");
+  var y = document.getElementById("gamsub")
+  if (x.style.display === "none") {
+    x.style.display = "inline-flex";
+    y.style.display = "none"
+  } else {
+    x.style.display = "none";
+  }
+}
+function myFunctionss() {
+  var x = document.getElementById("gamsub");
+  var y = document.getElementById("gmasub")
+  if (x.style.display === "none") {
+    x.style.display = "inline-flex";
+    y.style.display = "none"
+  } else {
+    x.style.display = "none";
+  }
+}
